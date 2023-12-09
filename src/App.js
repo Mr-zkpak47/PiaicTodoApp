@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AddTask from "./AddTask";
 import TaskList from "./TaskList";
 import "./App.css";
@@ -6,8 +6,13 @@ import "./App.css";
 export default function App() {
   const [tasks, setTasks] = useState(initialItems);
   const [complete, setComplete] = useState(
-    initialItems.filter((item) => item.done).length
+    calculateCompletedCount(initialItems)
   );
+
+  useEffect(() => {
+    // Update completed tasks count whenever tasks change
+    setComplete(calculateCompletedCount(tasks));
+  }, [tasks]);
 
   const handleAddTask = (text) => {
     setTasks([
@@ -18,26 +23,17 @@ export default function App() {
         done: false,
       },
     ]);
-    setComplete(complete + 1); // Increment completed tasks count on addition
   };
 
   const handleChangeTask = (task) => {
-    setTasks(
-      tasks.map((t) => {
-        if (t.id === task.id) {
-          return task;
-        } else {
-          return t;
-        }
-      })
+    setTasks((prevTasks) =>
+      prevTasks.map((t) => (t.id === task.id ? task : t))
     );
-    setComplete(task.done ? complete - 1 : complete + 1); // Update completed tasks count
   };
 
   const handleDeleteTask = (taskId) => {
-    const deletedTask = tasks.find((t) => t.id === taskId);
-    setTasks(tasks.filter((t) => taskId !== t.id));
-    setComplete(deletedTask.done ? complete - 1 : complete); // Update completed tasks count
+    setTasks((prevTasks) => prevTasks.filter((t) => t.id !== taskId));
+    // No need to update completed tasks count here
   };
 
   return (
@@ -77,3 +73,6 @@ const initialItems = [
     done: false,
   },
 ];
+
+// Function to calculate the count of completed tasks
+const calculateCompletedCount = (tasks) => tasks.filter((task) => task.done).length;
