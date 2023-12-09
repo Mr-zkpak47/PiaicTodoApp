@@ -7,7 +7,7 @@ const AddTask = ({ onAddTask }) => {
       <div className="flex flex-row justify-center gap-x-3 mb-3">
         <div className="flex relative justify-center">
         <input
-        className="bg-transparent outline-none h-7 pl-1 font-semibold text-sm"
+        className="bg-transparent outline-none h-7 pl-1 font-semibold text-sm w-[190px]"
         placeholder="Add Task"
         type="text"
         value={text}
