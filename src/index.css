@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply styles to all checkboxes */
+input[type="checkbox"] {
+    /* Hide the default checkbox */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    /* Set the size of the checkbox */
+    width: 20px;
+    height: 20px;
+    /* Make the checkbox round */
+    border-radius: 50%;
+    /* Add some padding to give space around the circle */
+    padding: 5px;
+    /* Add border for better visibility */
+    border: 2px solid rgb(226, 226, 226);
+    background-color: transparent;
+  }
+  
+  /* Style the checked state */
+  input[type="checkbox"]:checked {
+    /* Set the background color to your desired color */
+    background-color: #4caf50; /* Green color as an example */
+    /* You can also change the border color on checked state if needed */
+    border-color: #4caf50;
+  }
