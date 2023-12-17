@@ -45,7 +45,7 @@ export default function App() {
         <div className="bg-gray-200 rounded-lg shadow-lg shadow-black/40 p-5 flex flex-col justify-center items-center">
           <AddTask onAddTask={handleAddTask} />
           <span className="text-lg font-semibold self-start text-gray-800 mb-1">
-            You have <span className="text-blue-500">{complete.text}</span>{" "}
+            You have <span className="text-blue-500">{complete}</span>{" "}
             tasks to complete.
           </span>
           <nav className="w-full">
