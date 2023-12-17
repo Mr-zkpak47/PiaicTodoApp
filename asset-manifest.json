@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/PiaicTodoApp/static/css/main.4fccee14.css",
-    "main.js": "/PiaicTodoApp/static/js/main.c6a15807.js",
+    "main.css": "/PiaicTodoApp/static/css/main.7064024f.css",
+    "main.js": "/PiaicTodoApp/static/js/main.7bc23c20.js",
     "static/js/787.94fd17a2.chunk.js": "/PiaicTodoApp/static/js/787.94fd17a2.chunk.js",
     "index.html": "/PiaicTodoApp/index.html",
-    "main.4fccee14.css.map": "/PiaicTodoApp/static/css/main.4fccee14.css.map",
-    "main.c6a15807.js.map": "/PiaicTodoApp/static/js/main.c6a15807.js.map",
+    "main.7064024f.css.map": "/PiaicTodoApp/static/css/main.7064024f.css.map",
+    "main.7bc23c20.js.map": "/PiaicTodoApp/static/js/main.7bc23c20.js.map",
     "787.94fd17a2.chunk.js.map": "/PiaicTodoApp/static/js/787.94fd17a2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4fccee14.css",
-    "static/js/main.c6a15807.js"
+    "static/css/main.7064024f.css",
+    "static/js/main.7bc23c20.js"
   ]
 }
